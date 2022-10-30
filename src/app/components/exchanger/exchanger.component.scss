@@ -1,0 +1,34 @@
+#first-input-controller, #second-input-controller{
+  height: 40px;
+  width: 300px;
+  padding: 5px 5px 5px 20px;
+  margin: 5px 10px 7px 0;
+  font-size: 1.3em;
+  font-family: 'Noto Sans', sans-serif;
+  border-radius: 5px;
+  border: #d5d5d5 2px solid;
+  background-color: #fdfdfd;
+  box-shadow: 6px -7px 8px -12px rgba(0,0,0,0.75);
+  outline: none;
+}
+
+#first-select-controller, #second-select-controller {
+  height: 50px;
+  width: 100px;
+  padding: 0 0 0 15px;
+  font-size: 1.3em;
+  font-family: 'Noto Sans', sans-serif;
+  color: #fdfdfd;
+  background-color: #008dfb;
+  border-radius: 5px;
+  border: #d5d5d5 2px solid;
+  box-shadow: 6px -7px 8px -12px rgba(0,0,0,0.75);
+  outline: none;
+}
+
+.first-controller, .second-controller{
+  display: flex;
+  align-items: center;
+}
+
+
