@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="currency-exchanger">
     <div class="first-controller">
-      <span *ngIf="secondInputValue === 'Error'" class="error-span">Invalid character used.</span>
+      <span *ngIf="secondInputValue === 'Error'" class="error-span">Invalid character is used.</span>
       <div class="container">
         <input [ngClass]="{'input-error' : secondInputValue === 'Error'}" type="text" class="first-input-controller"
                [(ngModel)]="firstInputValue"
@@ -30,7 +30,7 @@
           <option value="EUR">EUR</option>
         </select>
       </div>
-      <span *ngIf="firstInputValue === 'Error'" class="error-span">Invalid character used.</span>
+      <span *ngIf="firstInputValue === 'Error'" class="error-span">Invalid character is used.</span>
     </div>
   </div>
 </div>
