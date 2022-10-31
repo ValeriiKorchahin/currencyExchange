@@ -1,8 +1,8 @@
 #first-input-controller, #second-input-controller{
-  height: 40px;
-  width: 300px;
+  height: 60px;
+  width: 350px;
   padding: 5px 5px 5px 20px;
-  margin: 5px 10px 7px 0;
+  margin: 9px 10px 7px 0;
   font-size: 1.3em;
   font-family: 'Noto Sans', sans-serif;
   border-radius: 5px;
@@ -13,13 +13,13 @@
 }
 
 #first-select-controller, #second-select-controller {
-  height: 50px;
+  height: 73px;
   width: 100px;
   padding: 0 0 0 15px;
   font-size: 1.3em;
   font-family: 'Noto Sans', sans-serif;
   color: #fdfdfd;
-  background-color: #008dfb;
+  background-color: #adadad;
   border-radius: 5px;
   border: #d5d5d5 2px solid;
   box-shadow: 6px -7px 8px -12px rgba(0,0,0,0.75);
