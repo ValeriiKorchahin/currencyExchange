@@ -3,10 +3,13 @@
     <div class="first-controller">
       <span *ngIf="secondInputValue === 'Error'" class="error-span">Invalid character used.</span>
       <div class="container">
-        <input [ngClass]="{'input-error' : secondInputValue === 'Error'}" type="text" class="first-input-controller" [(ngModel)]="firstInputValue"
+        <input [ngClass]="{'input-error' : secondInputValue === 'Error'}" type="text" class="first-input-controller"
+               [(ngModel)]="firstInputValue"
                (keyup)="firstInputController(firstInputValue)">
-        <select id="first-select-controller" [(ngModel)]="firstSelectedCurrency"
-                (change)="firstCurrencyControllerChange(firstSelectedCurrency)">
+        <select id="first-select-controller"
+                [(ngModel)]="firstSelectedCurrency"
+                (change)="firstCurrencyControllerChange(firstSelectedCurrency)"
+                [disabled]="secondInputValue === 'Error'">
           <option value="UAH">UAH</option>
           <option value="USD">USD</option>
           <option value="EUR">EUR</option>
@@ -15,10 +18,13 @@
     </div>
     <div class="second-controller">
       <div class="container">
-        <input [ngClass]="{'input-error' : firstInputValue === 'Error'}" type="text" class="second-input-controller" [(ngModel)]="secondInputValue"
+        <input [ngClass]="{'input-error' : firstInputValue === 'Error'}" type="text" class="second-input-controller"
+               [(ngModel)]="secondInputValue"
                (keyup)="secondInputController(secondInputValue)">
-        <select id="second-select-controller" [(ngModel)]="secondSelectedCurrency"
-                (change)="secondCurrencyControllerChange(secondSelectedCurrency)">
+        <select id="second-select-controller"
+                [(ngModel)]="secondSelectedCurrency"
+                (change)="secondCurrencyControllerChange(secondSelectedCurrency)"
+                [disabled]="firstInputValue === 'Error'">
           <option value="UAH">UAH</option>
           <option value="USD">USD</option>
           <option value="EUR">EUR</option>
