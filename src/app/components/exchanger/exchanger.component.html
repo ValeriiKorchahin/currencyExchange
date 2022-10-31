@@ -1,24 +1,30 @@
 <div class="wrapper">
   <div class="currency-exchanger">
     <div class="first-controller">
-      <input type="text" id="first-input-controller" [(ngModel)]="firstInputValue"
-             (keyup)="firstInputController(firstInputValue)">
-      <select id="first-select-controller" [(ngModel)]="firstSelectedCurrency"
-              (change)="firstCurrencyControllerChange(firstSelectedCurrency)">
-        <option value="UAH">UAH</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-      </select>
+      <span *ngIf="secondInputValue === 'Error'" class="error-span">Invalid character used.</span>
+      <div class="container">
+        <input [ngClass]="{'input-error' : secondInputValue === 'Error'}" type="text" class="first-input-controller" [(ngModel)]="firstInputValue"
+               (keyup)="firstInputController(firstInputValue)">
+        <select id="first-select-controller" [(ngModel)]="firstSelectedCurrency"
+                (change)="firstCurrencyControllerChange(firstSelectedCurrency)">
+          <option value="UAH">UAH</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
     </div>
     <div class="second-controller">
-      <input type="text" id="second-input-controller" [(ngModel)]="secondInputValue"
-             (keyup)="secondInputController(secondInputValue)">
-      <select id="second-select-controller" [(ngModel)]="secondSelectedCurrency"
-              (change)="secondCurrencyControllerChange(secondSelectedCurrency)">
-        <option value="UAH">UAH</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-      </select>
+      <div class="container">
+        <input [ngClass]="{'input-error' : firstInputValue === 'Error'}" type="text" class="second-input-controller" [(ngModel)]="secondInputValue"
+               (keyup)="secondInputController(secondInputValue)">
+        <select id="second-select-controller" [(ngModel)]="secondSelectedCurrency"
+                (change)="secondCurrencyControllerChange(secondSelectedCurrency)">
+          <option value="UAH">UAH</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+      <span *ngIf="firstInputValue === 'Error'" class="error-span">Invalid character used.</span>
     </div>
   </div>
 </div>

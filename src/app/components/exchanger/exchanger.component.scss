@@ -1,4 +1,4 @@
-#first-input-controller, #second-input-controller{
+.first-input-controller, .second-input-controller{
   height: 60px;
   width: 350px;
   padding: 5px 5px 5px 20px;
@@ -19,16 +19,35 @@
   font-size: 1.3em;
   font-family: 'Noto Sans', sans-serif;
   color: #fdfdfd;
-  background-color: #adadad;
+  background-color: #9e9e9e;
   border-radius: 5px;
   border: #d5d5d5 2px solid;
   box-shadow: 6px -7px 8px -12px rgba(0,0,0,0.75);
   outline: none;
 }
 
-.first-controller, .second-controller{
+.container{
   display: flex;
   align-items: center;
 }
 
+.input-error{
+  height: 60px;
+  width: 350px;
+  padding: 5px 5px 5px 20px;
+  margin: 9px 10px 7px 0;
+  font-size: 1.3em;
+  font-family: 'Noto Sans', sans-serif;
+  border-radius: 5px;
+  border: #df001c 2px solid;
+  background-color: #fdfdfd;
+  box-shadow: 6px -7px 8px -12px rgba(0,0,0,0.75);
+  outline: none;
+}
+
+.error-span{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1em;
+  color: #df001c;
+}
 
